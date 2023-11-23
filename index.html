@@ -32,6 +32,12 @@
           elem.requestFullscreen();
             w = window.innerWidth;
             h = window.innerHeight;
+            if(w < 165*2 || h<439*2){
+              fonts = 25;
+            } else {
+              fonts = 50;
+            }
+            alert(fonts)
             show_start();
           break;
           case 0:
