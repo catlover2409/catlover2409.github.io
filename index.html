@@ -30,13 +30,19 @@
         hide_all();
         switch (stage) {
           case -1:
-          elem.requestFullscreen();
             w = window.innerWidth;
             h = window.innerHeight;
             if(w < 165*2 || h<439*2){
               fonts = 25;
             } else {
               fonts = 50;
+            }
+            if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
             }
             alert(fonts)
             set();
