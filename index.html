@@ -22,6 +22,7 @@
     <div id="text4" style="position: absolute; top:30%; width:70%; height:30%; left:15%;"></div>
     <div id="text5" style="position: absolute; top:30%; width:70%; height:30%; left:15%;"></div>
     <div id="text6" style="position: absolute; top:30%; width:70%; height:30%; left:15%;"></div>
+    <div id="text7" style="position: absolute; top:30%; width:70%; height:30%; left:15%;"></div>
     <script type="text/javascript">
       var t1=0;
       var t2 =0;
@@ -139,6 +140,19 @@
         autoAnimation:true
       });
             break
+          case 7:
+            document.getElementById('text7').style.display = 'block';
+            text7 = new Vara("#text7","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
+            text:"Text7",
+          id:"nog",
+          strokeWidth:4, // Width / Thickness of the stroke
+          textAlign:"center",
+          letterSpacing:2.5,
+          fontSize:fonts
+      }], {
+        autoAnimation:false
+      });
+            break
           default:
             elem.requestFullscreen();
         }
@@ -165,6 +179,7 @@
         document.getElementById('text4').style.display = 'none';
         document.getElementById('text5').style.display = 'none';
         document.getElementById('text6').style.display = 'none';
+        document.getElementById('text7').style.display = 'none';
       }
       function hide_all(){
         hide_start();
