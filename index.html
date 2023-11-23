@@ -76,16 +76,7 @@
         break;
           case 2:
             document.getElementById('text2').style.display = 'block';
-            text2 = new Vara("#text1","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
-            text:"Text2",
-          id:"nog",
-          strokeWidth:4, // Width / Thickness of the stroke
-          textAlign:"center",
-          letterSpacing:2.5,
-          fontSize:fonts
-      }], {
-        autoAnimation:true
-      });
+            text2.draw('nog')
             break;
           case 3:
             document.getElementById('text3').style.display = 'block';
@@ -151,6 +142,16 @@
       }], {
         autoAnimation:false
       });// titlu + autor
+      text2 = new Vara("#text2","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
+            text:"Text2",
+          id:"nog",
+          strokeWidth:4, // Width / Thickness of the stroke
+          textAlign:"center",
+          letterSpacing:2.5,
+          fontSize:fonts
+      }], {
+        autoAnimation:false
+      });
       t1.animationEnd(function(i,o){
         t2.draw('autor')
       })
