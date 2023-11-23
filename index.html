@@ -18,14 +18,21 @@
     <div id="aut" style="position: absolute; top:50%; width:98%; height:25%; left:1%;"></div>
     <div id="text1" style="position: absolute; top:50%; width:20%; height:25%; left:30%;"></div>
     <script type="text/javascript">
+      var t1=0;
+      var t2 =0;
+      var text1 = 0;
+      var h = 0;
+      var w = 0;
       elem = document.documentElement;
       var stage = -1;
       function click_ev(){
         hide_all();
         switch (stage) {
           case -1:
-          show_start();
           elem.requestFullscreen();
+            w = window.innerWidth;
+            h = window.innerHeight;
+            show_start();
           break;
           case 0:
           show_start();
@@ -46,39 +53,6 @@
         click_ev();
         stage-=1
       }
-      var t1 = new Vara("#tlt","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
-          text:"Ma vie en dessins",
-          strokeWidth:4,
-          id:"titlu",
-          textAlign:"center",
-          letterSpacing:2.5,
-          fontSize:50
-      }], {
-        autoAnimation:false
-      });
-      var t2 = new Vara("#aut","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
-          text:"Milian Darius",
-          id:"autor",
-          strokeWidth:4, // Width / Thickness of the stroke
-          textAlign:"center",
-          letterSpacing:2.5,
-          fontSize:50
-      }], {
-        autoAnimation:false
-      });// titlu + autor
-      var text1 = new Vara("#text1","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
-          text:"Text",
-          id:"t1",
-          strokeWidth:4, // Width / Thickness of the stroke
-          textAlign:"center",
-          letterSpacing:2.5,
-          fontSize:50
-      }], {
-        autoAnimation:false
-      });
-      t1.animationEnd(function(i,o){
-        t2.draw('autor')
-      })
       function hide_start(){
         document.getElementById('tlt').style.display = 'none';
         document.getElementById('aut').style.display='none';
@@ -96,6 +70,41 @@
       function hide_all(){
         hide_start();
         hide_1();
+      }
+      function set(){
+        t1 = new Vara("#tlt","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
+          text:"Ma vie en dessins",
+        strokeWidth:4,
+          id:"titlu",
+          textAlign:"center",
+          letterSpacing:2.5,
+          fontSize:fonts
+      }], {
+        autoAnimation:false
+      });
+      t2 = new Vara("#aut","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
+          text:"Milian Darius",
+          id:"autor",
+          strokeWidth:4, // Width / Thickness of the stroke
+          textAlign:"center",
+          letterSpacing:2.5,
+          fontSize:fonts
+      }], {
+        autoAnimation:false
+      });// titlu + autor
+      text1 = new Vara("#text1","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
+          text:"Text",
+          id:"t1",
+          strokeWidth:4, // Width / Thickness of the stroke
+          textAlign:"center",
+          letterSpacing:2.5,
+          fontSize:fonts
+      }], {
+        autoAnimation:false
+      });
+      t1.animationEnd(function(i,o){
+        t2.draw('autor')
+      })
       }
     </script>
   </body>
