@@ -52,8 +52,17 @@
           t1.draw("titlu");
           break;
         case 1:
-        show_1();
-        text1.draw("t1");
+        document.getElementById('text1').style.display = 'block';
+        text1 = new Vara("#text1","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
+            text:"Text",
+          id:"t1",
+          strokeWidth:4, // Width / Thickness of the stroke
+          textAlign:"center",
+          letterSpacing:2.5,
+          fontSize:fonts
+      }], {
+        autoAnimation:true
+      });
         break;
           case 2:
             alert("gugugu")
@@ -75,10 +84,7 @@
       function show_start(){
         document.getElementById('tlt').style.display = 'block';
         document.getElementById('aut').style.display='block';
-      }
-      function show_1(){
-        document.getElementById('text1').style.display = 'block';
-      }
+          }
       function hide_1(){
         document.getElementById('text1').style.display = 'none';
       }
@@ -107,16 +113,6 @@
       }], {
         autoAnimation:false
       });// titlu + autor
-      text1 = new Vara("#text1","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
-          text:"Text",
-          id:"t1",
-          strokeWidth:4, // Width / Thickness of the stroke
-          textAlign:"center",
-          letterSpacing:2.5,
-          fontSize:fonts
-      }], {
-        autoAnimation:false
-      });
       t1.animationEnd(function(i,o){
         t2.draw('autor')
       })
