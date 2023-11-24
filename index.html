@@ -23,8 +23,8 @@
     <div id="text5" style="position: absolute; top:30%; width:80%; height:30%; left:15%;"></div>
     <div id="text6" style="position: absolute; top:30%; width:70%; height:30%; left:15%;"></div>
     <div id="text7" style="position: absolute; top:30%; width:70%; height:30%; left:15%;"></div>
-    <img id="i1" style="position: absolute; left: 1%; bottom: 1%; height: 30%; width: 30%" src=""></div>
-    <img id="i2" style="position: absolute; right: 1%; bottom: 1%; height: 30%; width: 30%" src=""></div>
+    <img id="i1" style="position: absolute; left: 1%; bottom: 1%; height: 30%; width: 30%" src="https://i.ibb.co/64QFJq7/20231124-071752.jpg"></div>
+    <img id="i2" style="position: absolute; right: 1%; bottom: 1%; height: 30%; width: 30%" src="https://i.ibb.co/JQbTKbQ/IMG-20231121-WA0010.jpg"></div>
     <img id="i3" style="position: absolute; left: 1%; bottom: 1%; height: 30%; width: 30%" src=""></div>
     <img id="i4" style="position: absolute; left: 1%; bottom: 1%; height: 30%; width: 30%" src=""></div>
     <img id="i5" style="position: absolute; left: 1%; bottom: 1%; height: 30%; width: 30%" src=""></div>
@@ -85,6 +85,8 @@
       }], {
         autoAnimation:true
       });
+        document.getElementById('i1').style.display = 'block';
+        document.getElementById('i2').style.display = 'block';
         break;
           case 2:
             document.getElementById('text2').style.display = 'block';
@@ -198,9 +200,22 @@
         document.getElementById('text6').style.display = 'none';
         document.getElementById('text7').style.display = 'none';
       }
+      function hmg(){
+        document.getElementById('i1').style.display = 'none';
+        document.getElementById('i2').style.display = 'none';
+        document.getElementById('i3').style.display = 'none';
+        document.getElementById('i4').style.display = 'none';
+        document.getElementById('i5').style.display = 'none';
+        document.getElementById('i6').style.display = 'none';
+        document.getElementById('i7').style.display = 'none';
+        document.getElementById('i8').style.display = 'none';
+        document.getElementById('i9').style.display = 'none';
+        document.getElementById('i10').style.display = 'none';
+      }
       function hide_all(){
         hide_start();
         hide_6l();
+        hmg();
       }
       function set(){
         t1 = new Vara("#tlt","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Shadows-Into-Light/shadows-into-light.json",[{
